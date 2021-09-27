@@ -1,0 +1,79 @@
+body {
+   background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+   font-family: 'Noto Sans', sans-serif;
+}
+
+.wrapper {
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+}
+
+#inputTask {
+   width: 250px;
+}
+
+#taskArea {
+   background: rgb(196, 196, 196);
+   border-radius: 10px;
+   box-shadow: black -7px 10px 10px;
+   padding: 15px;
+   width: fit-content;
+}
+
+#editBtn, #delBtn {
+   margin-left: 10px;
+}
+
+/* this is so the list doesnt become inline while tasks are being edited, if it was just block, the 
+   buttons won't display inline */
+ul > input[type='text'] {
+   display: inline-block;
+   margin-right: 5px;
+}
+
+/* input styling from css-tricks.com 
+   slightly modified */
+
+input[type='text'] {
+   border: 5px solid white;  
+   box-shadow: 
+     inset 0 0 8px  rgba(0,0,0,0.1),
+           0 0 16px rgba(0,0,0,0.1); 
+   padding: 5px;
+   background: rgba(255,255,255,0.5);
+   margin: 5px 5px 10px 5px;   
+   border-radius: 10px;
+}
+
+input[type='text']:hover {
+   border: 5px solid grey;
+}
+
+input[type='text']:focus {
+   outline-style: none;
+   border: 5px solid grey;
+   padding: 10px; /* enlarges text box on click */
+}
+
+/* returns back to regular style after focusing */
+input[type='text']::after {
+   border: 5px solid white;  
+   box-shadow: 
+     inset 0 0 8px  rgba(0,0,0,0.1),
+           0 0 16px rgba(0,0,0,0.1); 
+   padding: 5px;
+   background: rgba(255,255,255,0.5);
+   margin: 5px 5px 10px 5px;   
+   border-radius: 10px;
+}
+
+input[type='text']::placeholder {
+   font-family: "Noto Sans", sans-serif;
+}
+
+ul {
+   list-style-type: none;
+}
