@@ -84,7 +84,7 @@ function createEditInput() {
 
       saveBtn.addEventListener("click", saveInput);
       newItem.addEventListener("keyup", function(event) {
-         if(event.keyCode === 13) {
+         if(event.key === 13) {
             saveBtn.click();
          }
       });
