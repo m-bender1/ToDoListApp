@@ -8,7 +8,7 @@ var taskList = document.getElementById("taskList");
 // for add button to work with enter key
 let taskInputArea = document.getElementById("inputTask");
 taskInputArea.addEventListener("keyup", function(event) {
-   if (event.key === 13) {
+   if (event.keyCode === 13) {
     event.preventDefault();
     addBtn.click();
    }
@@ -84,7 +84,7 @@ function createEditInput() {
 
       saveBtn.addEventListener("click", saveInput);
       newItem.addEventListener("keyup", function(event) {
-         if(event.key === 13) {
+         if(event.keyCode === 13) {
             saveBtn.click();
          }
       });
